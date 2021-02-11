@@ -1,0 +1,12 @@
+{% extends "root.html" %} {% block content %}
+<a href="/new_package">New Package</a>
+<div>
+  {% for package in packages %}
+  <p>{{ package.name }}</p>
+  <p>{{ package.recipient }}</p>
+  <p>{{ package.origin }}</p>
+  <p>{{ package.location }}</p>
+  <p>{{ package.destination }}</p>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -267,3 +267,5 @@ cython_debug/
 
 # Emacs temporary files
 \#*#
+
+/migrations
