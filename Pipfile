@@ -11,6 +11,8 @@ flask-wtf = "*"
 psycopg2-binary = "*"
 sqlalchemy = "*"
 flask-sqlalchemy = "*"
+alembic = "*"
+flask-migrate = "*"
 
 [dev-packages]
 
