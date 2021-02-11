@@ -4,11 +4,11 @@ from app.config import Config
 from app.models import db, Package
 from app.shipping_form import ShippingForm
 
+
 app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
 migrate = Migrate(app, db)
-
 
 @app.route("/")
 def root():
@@ -25,5 +25,7 @@ def new_package():
                               origin=data["origin"], destination=data["destination"], location=data["origin"])
         db.session.add(new_package)
         db.session.commit()
+        Package.advance_all_locations()
         return redirect("/")
     return render_template('shipping_request.html', form=form)
+
