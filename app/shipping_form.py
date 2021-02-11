@@ -6,10 +6,11 @@ from map.map import map
 
 v = [DataRequired()]
 
+
 class ShippingForm(FlaskForm):
     name_sender = StringField("Sender name", v)
     name_recipient = StringField("Recipient name", v)
     origin = SelectField("Origin", v, choices=map)
     destination = SelectField("Destination", v, choices=map)
-    express_shipping = BooleanField("Express shipping", v)
+    express_shipping = BooleanField("Express shipping")
     submit = SubmitField("Submit")

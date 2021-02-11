@@ -1,78 +1,11 @@
-{% extends "root.html" %}
-
-{% block content %}
-<form method="post" action="root.html">
+{% extends "root.html" %} {% block content %}
+<form method="post" action="/new_package">
   {{ form.csrf_token }}
-  <div>
-    {{ form.name_sender.label }} {{ form.name_sender }}
-
-    <!-- {% if form.employee_number.errors %}
-      <ul>
-        {% for error in form.employee_number.errors %}
-          <li>{{ error }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %} -->
-  </div>
-  <div>
-    {{ form.name_recipient.label }} {{ form.name_recipient }}
-
-    <!-- {% if form.employee_number.errors %}
-      <ul>
-        {% for error in form.employee_number.errors %}
-          <li>{{ error }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %} -->
-  </div>
-  <div>
-    {{ form.origin.label }} {{ form.origin }}
-    <!-- <div class="selector">
-        <input>
-      </div>
-      {% for item in map %}
-        <div>{{ item }}</div>
-        {% if slot.appointment %}
-          <div class="appointment" style="grid-row-end: span {{ slot.appointment.units }};">
-            {{ slot.appointment.name }}
-          </div>
-        {% elif slot.open %}
-          <div></div>
-        {% endif %}
-      {% endfor %} -->
-  </div>
-  <div>
-    {{ form.destination.label }} {{ form.destination }}
-    <!-- <div class="selector">
-        <input>
-      </div>
-      {% for item in map %}
-        <div>{{ item }}</div>
-        {% if slot.appointment %}
-          <div class="appointment" style="grid-row-end: span {{ slot.appointment.units }};">
-            {{ slot.appointment.name }}
-          </div>
-        {% elif slot.open %}
-          <div></div>
-        {% endif %}
-      {% endfor %} -->
-  </div>
-  <div>
-    {{ form.express_shipping.label }} {{ form.express_shipping }}
-    <!-- <div class="selector">
-        <input>
-      </div>
-      {% for item in map %}
-        <div>{{ item }}</div>
-        {% if slot.appointment %}
-          <div class="appointment" style="grid-row-end: span {{ slot.appointment.units }};">
-            {{ slot.appointment.name }}
-          </div>
-        {% elif slot.open %}
-          <div></div>
-        {% endif %}
-      {% endfor %} -->
-  </div>
+  <div>{{ form.name_sender.label }} {{ form.name_sender }}</div>
+  <div>{{ form.name_recipient.label }} {{ form.name_recipient }}</div>
+  <div>{{ form.origin.label }} {{ form.origin }}</div>
+  <div>{{ form.destination.label }} {{ form.destination }}</div>
+  <div>{{ form.express_shipping.label }} {{ form.express_shipping }}</div>
   <div>{{ form.submit }}</div>
 </form>
 {% endblock %}
