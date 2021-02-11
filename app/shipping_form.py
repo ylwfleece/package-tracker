@@ -1,12 +1,10 @@
-from wtforms import FlaskForm
+from flask_wtf import FlaskForm
 from wtforms.fields import (
     StringField, SelectField, BooleanField, SubmitField)
 from wtforms.validators import DataRequired
 from map.map import map
 
-
 v = [DataRequired()]
-
 
 class ShippingForm(FlaskForm):
     name_sender = StringField("Sender name", v)

@@ -7,7 +7,7 @@ name = "pypi"
 flask = "~=1.1"
 python-dotenv = "~=0.13"
 jinja2 = "~=2.11"
-flask-wtf = "~=0.14"
+flask-wtf = "*"
 
 [dev-packages]
 
